@@ -286,7 +286,7 @@ class MoveDownFoldFix extends MoveByScreenLineMaintainDesiredColumn {
 
 @RegisterAction
 class MoveDown extends BaseMovement {
-  keys = ['j'];
+  keys = ['k'];
   doesntChangeDesiredColumn = true;
 
   public async execAction(position: Position, vimState: VimState): Promise<Position | IMovement> {
@@ -315,7 +315,7 @@ class MoveUpByScreenLineMaintainDesiredColumn extends MoveByScreenLineMaintainDe
 
 @RegisterAction
 class MoveUp extends BaseMovement {
-  keys = ['k'];
+  keys = ['l'];
   doesntChangeDesiredColumn = true;
 
   public async execAction(position: Position, vimState: VimState): Promise<Position | IMovement> {
@@ -488,7 +488,7 @@ export class MarkMovement extends BaseMovement {
 
 @RegisterAction
 export class MoveLeft extends BaseMovement {
-  keys = ['h'];
+  keys = ['j'];
 
   public async execAction(position: Position, vimState: VimState): Promise<Position> {
     return position.getLeft();
@@ -513,7 +513,7 @@ class BackSpaceInNormalMode extends BaseMovement {
 
 @RegisterAction
 class MoveRight extends BaseMovement {
-  keys = ['l'];
+  keys = [';'];
 
   public async execAction(position: Position, vimState: VimState): Promise<Position> {
     return new Position(position.line, position.character + 1);
